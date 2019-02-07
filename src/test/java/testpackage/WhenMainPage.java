@@ -27,7 +27,7 @@ public class WhenMainPage {
     @Test
     public void checkLinkMain() {
         steps.open();
-        steps.clickLinkMain();
+        steps.clickOnMainPage();
     }
 }
 

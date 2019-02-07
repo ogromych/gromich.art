@@ -4,7 +4,7 @@ import net.thucydides.core.annotations.Step;
 import org.assertj.core.api.Assertions;
 import testpackage.pages.ContactPage;
 
-public class ContactPageSteps {
+public class ContactPageSteps extends MainWidgetSteps{
     private ContactPage page;
 
     @Step

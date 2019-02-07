@@ -6,7 +6,7 @@ import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 import testpackage.steps.serenity.ContactPageSteps;
 
-public class ContactPageStepsJbehave {
+public class ContactPageStepsJbehave extends MainWidgetStepsJbehave{
 
     @Steps
     private ContactPageSteps steps;

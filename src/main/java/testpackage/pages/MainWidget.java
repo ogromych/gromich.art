@@ -1,7 +1,6 @@
 package testpackage.pages;
 
 import net.serenitybdd.core.pages.PageObject;
-import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 
 
@@ -10,14 +9,14 @@ public class MainWidget extends PageObject {
     private By logo = By.xpath("//a[@class='main_logo_a']");
     private By logoTitle = By.xpath("//span[@class='title']");
     private By logoSubTitle = By.xpath("//span[@class='subtitle']");
-    private By linkMain = By.xpath("//a[contains(text(),'ГЛАВНАЯ')]");
-    private By dropDownPortfolio = By.xpath("//a[contains(text(),'ПОРТФОЛИО')]");
-    private By linkWedding = By.xpath("//a[contains(text(),'Свадьба')]");
-    private By linkLove = By.xpath("//a[contains(text(),'Любовь')]");
-    private By linkFamily = By.xpath("//a[contains(text(),'Семья')]");
-    private By linkPortrait = By.xpath("//a[contains(text(),'Портрет')]");
-    private By linkReportage = By.xpath("//a[contains(text(),'Репортаж')]");
-    private By linkContacts = By.xpath("//a[contains(text(),'КОНТАКТЫ')]");
+    private By mainPage = By.xpath("//a[contains(text(),'ГЛАВНАЯ')]");
+    private By portfolioDropDown = By.xpath("//a[contains(text(),'ПОРТФОЛИО')]");
+    private By weddingPage = By.xpath("//a[contains(text(),'Свадьба')]");
+    private By lovePage = By.xpath("//a[contains(text(),'Любовь')]");
+    private By familyPage = By.xpath("//a[contains(text(),'Семья')]");
+    private By portraitPage = By.xpath("//a[contains(text(),'Портрет')]");
+    private By reportagePage = By.xpath("//a[contains(text(),'Репортаж')]");
+    private By contactsPage = By.xpath("//a[contains(text(),'КОНТАКТЫ')]");
 
     public MainWidget clickLogo(){
         find(logo).click();
@@ -34,51 +33,54 @@ public class MainWidget extends PageObject {
         return true;
     }
 
-    public MainWidget clickLinkMain(){
-        find(linkMain).click();
+    public MainWidget clickOnMainPage(){
+        find(mainPage).click();
         return this;
     }
 
-    public MainWidget clickDropDownPortfolio(){
-        find(dropDownPortfolio).click();
+    public MainWidget expandPortfolioDropDown(){
+        if (!find(weddingPage).isDisplayed()){
+            find(portfolioDropDown).click();
+        }
         return this;
     }
 
-    private MainWidget clickOnLinkInsidePortfolio(By link){
-        if (find(link).isDisplayed())
-            find(link).click();
-        else this.clickDropDownPortfolio();
-        find(link).waitUntilVisible().click();
+    private MainWidget clickOnPortfolioPage(By page){
+        if (find(page).isDisplayed()) {
+            find(page).click();
+        }
+        else this.expandPortfolioDropDown();
+        find(page).waitUntilVisible().click();
         return this;
     }
 
-    public MainWidget clickLinkWedding(){
-        clickOnLinkInsidePortfolio(linkWedding);
+    public MainWidget clickOnWeddingPage(){
+        clickOnPortfolioPage(weddingPage);
         return this;
     }
 
-    public MainWidget clickLinkLove(){
-        clickOnLinkInsidePortfolio(linkLove);
+    public MainWidget clickOnLovePage(){
+        clickOnPortfolioPage(lovePage);
         return this;
     }
 
-    public MainWidget clickLinkFamily(){
-        clickOnLinkInsidePortfolio(linkFamily);
+    public MainWidget clickOnFamilyPage(){
+        clickOnPortfolioPage(familyPage);
         return this;
     }
 
-    public MainWidget clickLinkPortrait(){
-       clickOnLinkInsidePortfolio(linkPortrait);
+    public MainWidget clickOnPortraitPage(){
+       clickOnPortfolioPage(portraitPage);
         return this;
     }
 
-    public MainWidget clickLinkReportage(){
-        clickOnLinkInsidePortfolio(linkReportage);
+    public MainWidget clickOnReportagePage(){
+        clickOnPortfolioPage(reportagePage);
         return this;
     }
 
-    public MainWidget clickLinkContacts(){
-        find(linkContacts).click();
+    public MainWidget clickOnContactsPage(){
+        find(contactsPage).click();
         return this;
     }
 
