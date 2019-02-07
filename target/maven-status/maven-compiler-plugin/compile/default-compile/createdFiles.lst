@@ -1,0 +1,7 @@
+testpackage/steps/serenity/MainPageSteps.class
+testpackage/pages/ContactPage.class
+testpackage/steps/jbehave/MainPageStepsJbehave.class
+testpackage/pages/MainWidget.class
+testpackage/pages/MainPage.class
+testpackage/steps/serenity/ContactPageSteps.class
+testpackage/steps/jbehave/ContactPageStepsJbehave.class

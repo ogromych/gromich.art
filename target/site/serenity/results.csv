@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"When main page","Check link main","SUCCESS","2019-02-07T10:47:44.269+02:00[Europe/Kiev]","0.0","10.72"
+"When main page","Check logo link","SUCCESS","2019-02-07T10:47:55.093+02:00[Europe/Kiev]","0.0","5.47"
+"When contact page","Submit blank form","SUCCESS","2019-02-07T10:48:02.443+02:00[Europe/Kiev]","0.0","4.02"
+"When contact page","Send message","SUCCESS","2019-02-07T10:48:06.527+02:00[Europe/Kiev]","0.0","5.28"
