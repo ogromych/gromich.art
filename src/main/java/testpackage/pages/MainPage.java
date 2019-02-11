@@ -9,21 +9,30 @@ import java.util.List;
 @DefaultUrl("https://gromich.art")
 public class MainPage extends MainWidget {
 
-    private By mainCarousel = By.xpath("//div[@class='slick-track']/div");
+    private By carouselSlots = By.xpath("//div[@class='slick-track']/div//img");
+    private By currentImage = By.xpath("//div[contains(@class,'current')]//img");
 
-    public MainPage clickThroughMainCarousel() {
-        List<WebElementFacade> images = findAll(mainCarousel);
-
-        for (int i = 0; i < images.size(); i++) {
-            if (images.get(i).getAttribute("aria-hidden").equals("false")) {
-                images.get(i).click();
-            }
-        }
-        return this;
+    public List<WebElementFacade> getCarouselSlots() {
+        return findAll(carouselSlots);
     }
 
-    public boolean checkVisibilityOfImageOnMainCarousel(int index) {
-        List<WebElementFacade> images = findAll(mainCarousel);
-        return images.get(index).isVisible();
+    public WebElementFacade getImageInCarousel() {
+        return find(currentImage);
+    }
+
+    public boolean checkIsMainCarouselLooped() {
+        List<WebElementFacade> slots = this.getCarouselSlots();
+        String startingUrl = slots.get(0).getAttribute("src");
+        String url = startingUrl;
+
+        for (int i = 0; i < slots.size() && !url.equals(startingUrl); i++) {
+            url = slots.get(i).getAttribute("src");
+            slots.get(i).click();
+        }
+        return true;
+    }
+
+    public boolean isMainCarouselVisible() {
+        return find(currentImage).isVisible();
     }
 }

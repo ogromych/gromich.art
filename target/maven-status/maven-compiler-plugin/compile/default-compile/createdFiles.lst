@@ -11,6 +11,7 @@ testpackage/pages/PortfolioPage.class
 testpackage/steps/serenity/PortraitPageSteps.class
 testpackage/steps/serenity/MainPageSteps.class
 testpackage/pages/PortraitPage.class
+testpackage/steps/jbehave/WeddingPageStepsJbehave.class
 testpackage/pages/ContactPage.class
 testpackage/steps/serenity/MainWidgetSteps.class
 testpackage/steps/jbehave/MainWidgetStepsJbehave.class

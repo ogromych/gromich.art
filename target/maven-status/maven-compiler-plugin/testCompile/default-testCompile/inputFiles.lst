@@ -1,2 +1,3 @@
-/Users/a1/IdeaProjects/gromichArt/src/test/java/testpackage/WhenContactPage.java
-/Users/a1/IdeaProjects/gromichArt/src/test/java/testpackage/WhenMainPage.java
+/Users/a1/IdeaProjects/gromichArt/src/test/java/testpackage/features/ContactPage.java
+/Users/a1/IdeaProjects/gromichArt/src/test/java/testpackage/AcceptanceTest.java
+/Users/a1/IdeaProjects/gromichArt/src/test/java/testpackage/features/MainPage.java

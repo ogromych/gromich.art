@@ -11,8 +11,7 @@ public class MainWidgetSteps {
     public void clickLogo() {
         page.clickLogo();
         String URL = page.getDriver().getCurrentUrl();
-        Assertions.assertThat(
-                URL.equals("https://gromich.art/")).isTrue();
+        Assertions.assertThat(URL.equals("https://gromich.art/")).isTrue();
     }
 
     @Step("User checks logo title")

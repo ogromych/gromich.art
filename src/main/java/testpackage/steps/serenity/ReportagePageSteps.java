@@ -2,7 +2,6 @@ package testpackage.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
 import org.assertj.core.api.Assertions;
-import testpackage.pages.PortraitPage;
 import testpackage.pages.ReportagePage;
 
 public class ReportagePageSteps extends PortfolioPageSteps{
@@ -14,7 +13,7 @@ public class ReportagePageSteps extends PortfolioPageSteps{
 
     @Step("User checks URL")
     public void checkURL(){
-        Assertions.assertThat(page.getDriver().getCurrentUrl()).isEqualTo("https://gromich.art/reportage");
+        Assertions.assertThat(page.getDriver().getCurrentUrl()).isEqualTo("https://gromich.art/portfolio/reportage/");
     }
 }
 

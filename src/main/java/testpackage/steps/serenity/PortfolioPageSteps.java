@@ -13,7 +13,7 @@ public class PortfolioPageSteps extends MainWidgetSteps {
 
     @Step("User opens image viewer")
     public void getImageViewer() {
-        page.getImageViewer();
+        page.getImageInViewer();
     }
 
     @Step("User clicks on previous arrow")
@@ -43,7 +43,7 @@ public class PortfolioPageSteps extends MainWidgetSteps {
 
     @Step("User clicks trough all images in viewer")
     public void clickThroughAllImages() {
-        page.clickThroughAllImages();
+        page.browseThroughAllImages();
     }
 
 }

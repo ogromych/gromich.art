@@ -1,7 +1,5 @@
-Meta:
-
 Narrative:
-This story covers all test of contact page
+This story covers all tests of contact page
 
 Scenario: User sends message via contact form
 Given I open contact page

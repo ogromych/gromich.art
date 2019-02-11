@@ -2,7 +2,6 @@ package testpackage.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
 import org.assertj.core.api.Assertions;
-import testpackage.pages.PortfolioPage;
 import testpackage.pages.WeddingPage;
 
 public class WeddingPageSteps extends PortfolioPageSteps{
@@ -14,7 +13,15 @@ public class WeddingPageSteps extends PortfolioPageSteps{
 
     @Step("User checks URL")
     public void checkURL(){
-        Assertions.assertThat(page.getDriver().getCurrentUrl()).isEqualTo("https://gromich.art/wedding");
+        Assertions.assertThat(page.getDriver().getCurrentUrl()).isEqualTo("https://gromich.art/portfolio/wedding/");
     }
+
+    @Step("User checks that image browsing is looped")
+    public void checkImageBrowsingIsLooped() {
+        Assertions.assertThat(page.checkImageBrowsingIsLooped()).isTrue();
+    }
+
+
+
 }
 

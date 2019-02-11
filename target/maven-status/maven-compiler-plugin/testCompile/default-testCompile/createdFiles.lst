@@ -1,2 +1,3 @@
-testpackage/WhenMainPage.class
-testpackage/WhenContactPage.class
+testpackage/AcceptanceTest.class
+testpackage/features/MainPage.class
+testpackage/features/ContactPage.class

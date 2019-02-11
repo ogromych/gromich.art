@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="testpackage.WhenContactPage" skipped="0" tests="2" time="7.7" timestamp="2019-02-07 06:48:48"><testcase classname="testpackage.WhenContactPage" name="Submit blank form"/><testcase classname="testpackage.WhenContactPage" name="Send message"/></testsuite>

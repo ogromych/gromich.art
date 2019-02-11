@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 public class MainWidget extends PageObject {
 
-    private By logo = By.xpath("//a[@class='main_logo_a']");
+    private By logo = By.xpath("//div[@id='title-container']");
     private By logoTitle = By.xpath("//span[@class='title']");
     private By logoSubTitle = By.xpath("//span[@class='subtitle']");
     private By mainPage = By.xpath("//a[contains(text(),'ГЛАВНАЯ')]");
@@ -24,13 +24,12 @@ public class MainWidget extends PageObject {
     }
 
     public boolean isLogoTitleVisible(){
-        find(logoTitle).getText().equals("ALEKSANDR GROMICH");
-        return true;
+        return find(logoTitle).getText().equals("ALEKSANDR GROMICH");
+
     }
 
     public boolean isLogoSubTitleVisible(){
-        find(logoSubTitle).getText().equals("photographer");
-        return true;
+        return find(logoSubTitle).getText().equals("photographer");
     }
 
     public MainWidget clickOnMainPage(){
